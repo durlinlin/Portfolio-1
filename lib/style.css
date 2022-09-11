@@ -3,21 +3,29 @@ body {
   /* border: 3px solid red; */
   justify-items: center;
   align-items: center;
-  width: 100%;
+  /* width: 100% ; */
   height: 100vh;
   flex-direction: column;
-  background: rgb(249, 237, 245);
+  overflow: hidden;
+  
 }
 .background{
+  border: 1px solid black;
   position: absolute;
+  top: 0; 
+  left: 0; 
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-image: url("https://img.freepik.com/free-vector/japanese-street-pastel-colours_52683-44714.jpg?w=1480&t=st=1662852489~exp=1662853089~hmac=eedf831b43196f60d3efbe7edec6e9a58f14dd8992ae53efe52bcc471d0588ae");
+  background-image: url(./img/japanese-street-pastel-colours_52683-44714.jpeg);
   background-position: center;
   z-index: -1;
   opacity: 0.8;
-  filter:blur(2px);
+  /* filter:blur(2px); */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navContainer {
@@ -38,16 +46,11 @@ body {
 
 .contentContainer {
   display: flex;
-  width: 90%;
-  height: calc(90vh - 180px);
-  margin: 5% 5%;
-  /* border: 2px solid blue; */
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);  
-  border-radius: 20px;
-
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 180px);
+  /* border: 5px solid orange; */
 }
 
 .name {
@@ -100,9 +103,13 @@ body {
   /* border-radius: 10px; */
   border: 2px solid rgba(255, 255, 255, 0.6);
   color: white;
-  text-shadow: 2px 2px 7px #e877b3;
+  text-shadow: 2px 2px 5px #e877b3;
+  transition: transform 250ms;
 }
-
+.tab:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
 .home {
   flex-direction: column;
   height: 125px;
@@ -127,4 +134,53 @@ body {
   flex-direction: column;
   width: auto;
   height: 5vh;
+}
+.projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  height: 80%;
+  /* border: 2px solid blue; */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);  
+  border-radius: 20px;
+}
+.pro{
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 20px;
+  font-family: 'Silkscreen', cursive;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 7px #e877b3;
+  transition: transform 1s;
+  cursor: pointer;
+  transform: rotate(20deg);
+  transform-origin: top left;
+}
+.pro:hover{
+  background-color: rgb(255, 255, 255, 0.7);
+  transform: rotate(0);
+  transform-origin: top left;
+}
+.pin {
+  width: 15px;
+  height: 15px;
+  border: 3px solid rgb(16, 16, 16);
+  border-radius: 15px;
+  left: 0;
+  top: 0;
+  position: fixed;
 }
